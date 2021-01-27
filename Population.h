@@ -11,12 +11,79 @@ and adding it to the double linked list.
 */
 
 #pragma once
+#include <fstream>
 #include <iostream>
 #include <string>
-#include <list>
-#include <fstream>
+#include <vector>
 #include "part2.cpp"
 
+struct pop
+{
+  std::string name;
+  int year;
+  int population;
+};
+class Population
+{
+private:
+  std::vector<pop> populationDatabase;
+  //pop stats;
+
+public:
+  Population()
+  {
+    //populationDatabase = pop;
+  };
+  void readFile(std::string filename)
+  {
+    /*
+    std::ifstream populationList;
+    //Open file
+    populationList.open(filename);
+    //Make sure file is open
+    if (!populationList.is_open())
+    {
+      std::cout << "Could not open." << std::endl;
+    }
+    //Read data in
+    while(!populationList.eof())
+    {
+      populationList >> stats.name >> stats.year >> stats.population;
+      //Push values into vector
+      populationDatabase.push_back(stats);
+    }
+    //Close file
+    populationList.close();
+    */
+    //Print data in vector list (check)
+    /*
+    std::vector<populations>::iterator it;
+    for (it = populationDatabase.begin(); it != populationDatabase.end(); it++)
+    {
+      std::cout << it->name << it->year << it->population << std::endl;
+    }
+    */
+
+  };
+  //Calculates average Population
+  double averagePopulation(std::string pop)
+  {
+    /*
+    double totalPop = 0.0;
+    int popCount = 0;
+    double avg = 0.0;
+    std::vector<populations>::iterator it;
+    for (it = populationDatabase.begin(); it != populationDatabase.end(); it++)
+    {
+      totalPop += it->population;
+      popCount++;
+    }
+    avg = totalPop/popCount;
+    */
+    return 0.0;
+  };
+};
+/*
 struct Population::NodeStruct
 {
   std::string name;
@@ -86,3 +153,4 @@ double Population::averagePopulation(const std::string &  qcounty)
   average = pop/count;
   return average;
 }
+*/
