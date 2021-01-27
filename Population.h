@@ -15,28 +15,26 @@ and adding it to the double linked list.
 #include <iostream>
 #include <string>
 #include <vector>
-#include "part2.cpp"
 
-struct pop
+struct Pop
 {
   std::string name;
   int year;
-  int population;
+  double population;
 };
 class Population
 {
 private:
-  std::vector<pop> populationDatabase;
-  //pop stats;
+  std::vector<Pop> populationDatabase;
+  Pop stats;
 
 public:
   Population()
   {
-    //populationDatabase = pop;
+
   };
   void readFile(std::string filename)
   {
-    /*
     std::ifstream populationList;
     //Open file
     populationList.open(filename);
@@ -54,33 +52,28 @@ public:
     }
     //Close file
     populationList.close();
-    */
     //Print data in vector list (check)
-    /*
-    std::vector<populations>::iterator it;
+    std::vector<Pop>::iterator it;
     for (it = populationDatabase.begin(); it != populationDatabase.end(); it++)
     {
       std::cout << it->name << it->year << it->population << std::endl;
     }
-    */
 
   };
   //Calculates average Population
   double averagePopulation(std::string pop)
   {
-    /*
     double totalPop = 0.0;
     int popCount = 0;
     double avg = 0.0;
-    std::vector<populations>::iterator it;
+    std::vector<Pop>::iterator it;
     for (it = populationDatabase.begin(); it != populationDatabase.end(); it++)
     {
       totalPop += it->population;
       popCount++;
     }
     avg = totalPop/popCount;
-    */
-    return 0.0;
+    return avg;
   };
 };
 /*
